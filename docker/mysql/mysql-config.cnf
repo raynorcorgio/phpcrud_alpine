@@ -1,0 +1,14 @@
+[client]
+default-character-set = utf8mb4
+
+[mysql]
+default-character-set = utf8mb4
+
+[mysqld]
+init-connect='SET NAMES utf8mb4'
+collation_server=utf8mb4_unicode_ci
+character_set_server=utf8mb4
+
+# NOTE: the default is caching_sha2_password, but that is not supported by PHP at this time
+# mysql_native_password is not as secure, but it is supported by PHP
+default_authentication_plugin=mysql_native_password
