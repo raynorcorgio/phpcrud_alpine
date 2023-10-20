@@ -10,4 +10,4 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql
 
 COPY ./php.ini /usr/local/etc/php/php.ini
 COPY ./xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-COPY ./error-logging.ini /usr/local/etc/php/conf.d/error-logging.ini
+# COPY ./error-logging.ini /usr/local/etc/php/conf.d/error-logging.ini
