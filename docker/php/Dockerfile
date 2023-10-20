@@ -8,6 +8,6 @@ RUN pecl install xdebug-3.2.0 \
 # MySQLi and PDO are PHP's basic database drivers
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-COPY ./php.ini /usr/local/etc/php/php.ini
-COPY ./xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-# COPY ./error-logging.ini /usr/local/etc/php/conf.d/error-logging.ini
+COPY ./docker/php/php.ini /usr/local/etc/php/php.ini
+COPY ./docker/php/xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+COPY ./docker/php/error-logging.ini /usr/local/etc/php/conf.d/error-logging.ini
