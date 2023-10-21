@@ -1,4 +1,4 @@
-USE csd223_lab1;
+USE phpcrudalpine;
 
 CREATE TABLE IF NOT EXISTS `users` (
     `id` int(11) NOT NULL AUTO_INCREMENT,

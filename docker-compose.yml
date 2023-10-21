@@ -18,13 +18,13 @@ services:
       - frontend
       - backend
     ports:
-      - "8080:80"
+      - "8081:80"
     volumes:
       - ./:/var/www/html/
   mysql:
     build: ./docker/mysql/
     ports:
-      - "2231:3306"
+      - "2232:3306"
     networks:
       - backend
     volumes:
