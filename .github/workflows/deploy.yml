@@ -21,8 +21,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: .
-          file: ./docker/php/Dockerfile
+          context: docker/php
+          file: docker/php/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/phpcrudalpine_php:latest
       - name: Set up Docker Buildx for Apache
@@ -30,8 +30,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: .
-          file: ./docker/apache/Dockerfile
+          context: docker/apache
+          file: docker/apache/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/phpcrudalpine_apache:latest
       - name: Set up Docker Buildx for MySQL
@@ -39,7 +39,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: .
-          file: ./docker/mysql/Dockerfile
+          context: docker/mysql
+          file: docker/mysql/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/phpcrudalpine_mysql:latest
